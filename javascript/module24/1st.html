@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <style>
+        li{
+            color: red;
+            list-style: none;
+        }
+        #fruit-title{
+            color: indigo;
+        }
+        .x important-places{
+            color: blue;
+            list-style:square;
+        }
+        .place li{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my DOM Tour</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia libero dolorum iure maxime nihil eius vel numquam natus? Sint, nisi.</p>
+
+    </header>
+
+    <main id="main-container">
+       <section>
+        <h1>My Awesome DOM</h1>
+        <ul>
+            <li>Jalali Set</li>
+            <li>Shafayet</li>
+            <li>Bonobas</li>
+        </ul>
+       </section>
+       <section id="fruit-container">
+        <h1 id="fruit-title" class="some-class random-class blue-bg">Fruits I like</h1>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Carrot</li>
+        </ul>
+       </section>
+       <section class="place">
+        <h1 id="place-title">Places i like to visit </h1>
+        <ul id="places-list">
+            <!-- control alter downarrow for multi-cursor -->
+            <li class="important-places">Sondorban </li>
+        <li class="important-places">BAndorban</li>
+        <li class="important-places">Catabon</li>
+        </ul>
+       </section>
+    </main>
+
+
+    <script src="../js/dom.js">  
+    </script>
+    <script src="../js/append.js"></script>
+    <script>
+        // console.log('hi this is script inside  html')
+        // const student ={
+        //     name:'Abul',
+        //     Id:11,
+        //     study:function(time){
+        //         console.log(time);
+
+        //     },
+        // }
+        // console.log('adding JS inside html');
+
+           
+
+        const title=document.getElementById('fruit-title');
+        //if we use title.getelement('class') then we get all the class of fruit-title 
+
+       // getElementsByClassName()
+        // getElementsById()
+
+        const liCollection= document.getElementsByTagName('li')
+        //console.log(liCollection)
+
+        const places=document.getElementsByClassName('important-places');
+        for(const item of places){
+            // console.log(item.innerHTML);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive website</title>
+    <style>
+        body{
+            border: 5px solid skyblue;
+            max-width: 1940px;
+            margin: 0 auto;
+        }
+        .image-container{
+            display: flex;
+        }
+        .image-container div{
+            width: 50%;
+        }
+
+        .image-container img{
+            /* border: 2px solid green; */
+            width: 100%;
+        }
+        @media screen and (max-width:576px) {
+            .image-container{
+                flex-direction:column;
+            }
+            .image-container div{
+                width: 100%;
+            }
+        }
+        ol{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ol>
+            <li>Viewporte meta tag</li>
+            <li>css Ralative unit</li>
+            <li>Body max width and horizental </li>
+            <li>image fluid</li>
+            <li>two column flex and use media query with flex direction column</li>
+            <li>multi column : grid layout </li>
+            <li>menu responsive :will need javascript</li>
+        </ol>
+    </header>
+    <main>
+        <div class="image-container">
+            <div> <img src="../images/Group 44.png" alt=""></div>
+            <div> <img src="../images/Group 70.png" alt=""></div>
+            <div>
+                <img src="../images/peacock.jpeg" alt="">
+            </div>
+        </div>
+       
+       
+    </main>
+</body>
+</html>

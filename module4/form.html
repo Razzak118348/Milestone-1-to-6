@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form </title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <h2>Please fill up the form </h2>
+            <form action="">
+                
+                <label for="name"> Your Name:
+                <input type="text" id="name" placeholder="your name">
+            </label>
+
+            <label for="email">Your email:
+                <input type="email" id="email" placeholder="Enter your email">
+            </label>
+        <label for="Phone">Your Phone <input type="number" id="number" placeholder="enter your phone number"></label>
+
+        <!-- the fieldset tag give us the chance to creat a area in a block system and the legend tage give the chance to write anything in this block -->
+        <fieldset>
+            <legend>
+                Pick one Pitha
+            </legend>
+
+            <label for="chitoy">
+               <!-- the name attribute give the chance to select one item at a time -->
+                <input type="radio"name="pitha" id="chitoy">Chitoy
+            </label>
+
+            <label for="Vapa">
+                <input type="radio" name="pitha" id="vapa">Vapa
+            </label>
+
+            <label for="puri">
+                <input type="radio" name="pitha" id="puri">Puri
+            </label>
+
+
+        </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

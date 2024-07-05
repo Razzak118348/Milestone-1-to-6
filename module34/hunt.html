@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hunting phone API</title>
+
+  <!-- tailwind and daisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+  <header>
+    <h2 class="text-6xl text-white mx-auto container text-center">!!!Hunting Phone!!!</h2>
+  </header>
+  <main class="mt-20">
+    <section class="mx-auto container mt-auto mb-10 flex justify-center items-center">
+      <input id="textfield" type="text" placeholder="Search Phone by word or letter"
+        class="input input-bordered w-full max-w-xs" /><button class="btn btn-active btn-accent font-bold"
+        onclick=" handleSearch() ">Search</button>
+    </section>
+
+    <section>
+      <div id="Phone-container" class="grid gap-x-8 gap-y-4  sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3">
+
+        <!-- <div class="card p-5 mx-auto  w-96  shadow-xl bg-gray-50">
+                <figure ><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"  alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div> -->
+      </div>
+
+      <!-- loading  -->
+      <div id="loading-spinner" class=" text-center my-6 hidden">
+        <span class="loading loading-spinner loading-md"></span>
+      </div>
+      <!-- show all phone  -->
+      <div id="show-all-container" class="text-center mt-6  mb-6 hidden">
+
+        <button onclick="handalShowAll()" class="btn btn-secondary ">Show All Phone</button>
+      </div>
+    </section>
+
+    <!-- modal section -> show details  -->
+    <section class=" text-white text-left">
+      <!-- Open the modal using ID.showModal() method -->
+      
+      <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 id="phone-name" class="font-bold text-3xl text-center mb-10"></h3>
+          <p class="my-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+<div id="show-detail-container" class="text-center content-center ">
+
+         </div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
+
+
+  </main>
+  <footer>
+
+  </footer>
+
+  <script src="./hunt.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+ Tel me something about JS engine  v* internal mechanism
+What is event loop in JS
+If javascript is single threaded  , how does it handle asynchronous call?
+Difference between setTimeOut and SetInterval
+Can you explain the difference between an asyn/ await and promise
+
+what's tehe error handling strategy for promises that were rejected while awaiting?
+can you explain what the .then() method does?

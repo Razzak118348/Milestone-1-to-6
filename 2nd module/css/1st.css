@@ -1,0 +1,25 @@
+h2{
+    color: darkgreen;
+    background-color: cyan ;
+}
+h4{
+    color: rgba(165, 140, 42, 0.784);
+
+}
+p{
+    background-color: rgba(0, 255, 128, 0.479);
+    /* width:500px;
+    this is a fixed unit */
+    width: 50%;
+    /* this is relative unit  */
+}
+#short{
+    background-color: rebeccapurple;
+}
+.style{
+    text-align: center;
+    color: red;
+}
+li{
+    background-color: rgba(205, 135, 92, 0.606);
+}

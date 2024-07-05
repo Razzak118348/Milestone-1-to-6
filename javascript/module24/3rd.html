@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Another Section</title>
+    <style>
+        body {
+            height: 150vh; /* Creating enough height for scrolling */
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        section:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <section id="section1" onclick="scrollToSection('section2')">Click me to scroll to Section 2</section>
+    <section id="section2" onclick="scrollToSection('section1')">Click me to scroll to Section 1</section>
+
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+           
+                section.scrollIntoView({ behavior: 'smooth' });
+           
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom final recap</title>
+</head>
+<body>
+    <h1>Final DOM event Handlers</h1>
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handleOnClick()">Handle event by add onclick function</button>
+    <button id="event-listener">handle event by addevenlistener</button>
+    <br><br>
+    <p id="paragraph">Default Input text</p>
+    <input id="input-feld" type="text">
+    <button id="btn-update" >Update</button>
+   
+    <script>
+        function handleOnClick(){
+            const handlerStatus =document.getElementById('handler-status');
+            handlerStatus.innerText='handle by function attached on onclick attribute';
+        }
+
+        // 2nd way 
+        document.getElementById('event-listener').addEventListener('click',function(){
+            const handlerStatus=document.getElementById('handler-status');
+            handlerStatus.innerText='text updated by add event listener button';
+        })
+//2nd recap
+        document.getElementById('btn-update').addEventListener('click',function(){
+            //catch the value of input 
+            const updateStatus=document.getElementById('input-feld');
+            //put the value of input field in a variable;
+        const InputText =updateStatus.value;
+
+         //catch the value of paragraph in a variable
+        const p=document.getElementById('paragraph');
+        //put the input field value in paragraph variable;
+        p.innerText=InputText;
+        //input er text empty 
+        updateStatus.value='';
+        })
+    </script>
+</body>
+</html>

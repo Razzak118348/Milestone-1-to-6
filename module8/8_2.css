@@ -1,0 +1,43 @@
+img{
+    width: 100%;
+    height: 100%;
+}
+.row{
+    height: 400px;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.row > div{
+    /* sob div re soman width dite flex :1 use kora hoy */
+  flex:1 ;
+}
+.vertical-collage img{
+    /* calc function use to calculate the hight of the images and gap  ....you have to give gap between the two things */
+   height:calc((100% - 5px)/2);   
+ 
+}
+.square-collage{
+    display: grid;
+    grid-template-columns: 
+    repeat(2,1fr);
+    gap:5px ;
+}
+/* responsive media query */
+@media screen and (max-width:576px) {
+    .row{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        /* ager height ta valo dekha jaccilo na so ekhoner ta valo kore dekhar jonno eta  */
+        height: auto;
+    }
+    .square-collage{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media screen and (min-width:576.01px)  and (max-width:998) {
+    .row{
+       flex-direction: column;
+    height: auto ;
+}
+}

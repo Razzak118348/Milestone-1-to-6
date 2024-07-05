@@ -1,0 +1,24 @@
+nav > ul{
+    display: flex;
+    background-color: black;
+}
+
+nav li{
+    list-style: none;
+    margin-right: 200px;
+    padding: 5px;
+}
+/* :hover is is cursor background color change */
+nav li:hover{
+    background-color: lightblue;
+}
+nav li a{
+    text-decoration: none;
+    color: yellow;
+}
+nav{
+    position: top;
+    position:fixed;
+    padding: 0px;
+    margin: 0px;
+}

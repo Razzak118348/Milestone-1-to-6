@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Buy Tickets</title>
+    <style>
+        .selected-tickets {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <h1 class="text-4xl font-bold mb-4">Buy Tickets</h1>
+
+    <div class="flex space-x-4">
+        <div class="w-1/2">
+            <h2 class="text-xl font-bold mb-2">Available Seats (Total: 100)</h2>
+            <div id="available-seats" class="grid grid-cols-10 gap-4"></div>
+        </div>
+        <div class="w-1/2">
+            <h2 class="text-xl font-bold mb-2">Selected Seats</h2>
+            <div id="selected-seats" class="selected-tickets"></div>
+            <h3 class="text-lg font-bold mt-4">Total Amount: $<span id="total-amount">0</span></h3>
+        </div>
+    </div>
+
+    <script>
+        const totalSeats = 100;
+        const maxTickets = 4;
+        let selectedSeats = [];
+        let totalAmount = 0;
+
+        function createSeatElement(seatNumber) {
+            const seat = document.createElement("div");
+            seat.className = "bg-green-500 rounded-md p-2 cursor-pointer";
+            seat.textContent = seatNumber;
+            seat.addEventListener("click", () => selectSeat(seatNumber));
+            return seat;
+        }
+
+        function selectSeat(seatNumber) {
+            if (selectedSeats.length < maxTickets && !selectedSeats.includes(seatNumber)) {
+                selectedSeats.push(seatNumber);
+                totalAmount += 10; // Assume each seat costs $10
+                updateUI();
+            }
+        }
+
+        function updateUI() {
+            const availableSeatsContainer = document.getElementById("available-seats");
+            const selectedSeatsContainer = document.getElementById("selected-seats");
+            const totalAmountElement = document.getElementById("total-amount");
+
+            // Clear and update available seats
+            availableSeatsContainer.innerHTML = "";
+            for (let i = 1; i <= totalSeats; i++) {
+                const seat = createSeatElement(i);
+                availableSeatsContainer.appendChild(seat);
+            }
+
+            // Update selected seats
+            selectedSeatsContainer.innerHTML = "";
+            selectedSeats.forEach(seatNumber => {
+                const selectedSeat = createSeatElement(seatNumber);
+                selectedSeatsContainer.appendChild(selectedSeat);
+            });
+
+            // Update total amount
+            totalAmountElement.textContent = totalAmount;
+        }
+
+        // Initial UI setup
+        document.addEventListener("DOMContentLoaded", () => {
+            updateUI();
+        });
+    </script>
+</body>
+</html>

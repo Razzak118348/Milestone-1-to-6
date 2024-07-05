@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default Example</title>
+</head>
+<body>
+
+<button id="myButton">Click me</button>
+
+<script>
+    // Add a click event listener to the button
+    document.getElementById("myButton").addEventListener("click", function(event) {
+        // Prevent the default behavior (e.g., prevent the form from submitting or prevent a link from navigating)
+        event.preventDefault();
+
+        // Your custom code goes here
+        console.log("Button clicked, default behavior prevented");
+    });
+</script>
+
+</body>
+</html>

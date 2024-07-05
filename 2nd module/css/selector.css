@@ -1,0 +1,8 @@
+.heading{
+    background-color: yellow;
+}
+/* to select specific attribute you need to give attribute name and value */
+.box[type="password"]
+{
+    color:rgba(255, 119, 0, 0.815);
+}

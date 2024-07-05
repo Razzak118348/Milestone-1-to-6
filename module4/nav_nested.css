@@ -1,0 +1,35 @@
+nav{
+    position: top;
+    padding: 0px;
+    margin: 0px;
+  width: 100%;
+  height: 100px;
+  background-color: black
+}
+ /* > this sign is called imidiate chiled */
+nav > ul{
+    display: flex;
+
+}
+
+nav li{
+    list-style: none;
+    margin-right: 200px;
+    padding: 5px;
+}
+/* :hover is is cursor background color change */
+nav li:hover{
+    background-color: lightblue;
+}
+nav li a{
+    text-decoration: none;
+    color: yellow;
+}
+nav li .dropdown{
+    display: none;
+}
+nav li:hover >  .dropdown{
+    display:block;
+    background-color: red;
+    color: black;
+}

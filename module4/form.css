@@ -1,0 +1,10 @@
+label{
+ display: block;
+ margin-bottom: 10px;
+}
+#name{
+    color:green;
+}
+#email{
+    color: rgb(255, 0, 0);
+}
